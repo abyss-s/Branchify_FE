@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { Outlet } from 'react-router-dom';
 import { css } from '@emotion/react';
+import Header from './Header/Header';
 
 const layoutStyle = css`
   display: flex;
@@ -11,9 +12,12 @@ const layoutStyle = css`
 
 const Layout = () => {
   return (
-    <div css={layoutStyle}>
-      <Outlet />
-    </div>
+    <>
+      <Header />
+      <div css={layoutStyle}>
+        <Outlet />
+      </div>
+    </>
   );
 };
 
