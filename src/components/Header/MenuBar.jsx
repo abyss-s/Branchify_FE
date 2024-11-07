@@ -1,6 +1,7 @@
 // src/components/MenuBar/MenuBar.jsx
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { useNavigate } from 'react-router-dom';
 
 const menuStyle = css`
   display: flex;
@@ -23,10 +24,20 @@ const menuStyle = css`
 `;
 
 const MenuBar = () => {
+  const nav = useNavigate();
+
+  const handleNavigateToHome = () => {
+    nav('/');
+  };
+
+  const handleNavigateToPrice = () => {
+    nav('/price');
+  };
+
   return (
     <ul css={menuStyle}>
-      <li>서비스 소개</li>
-      <li>가격</li>
+      <li onClick={handleNavigateToHome}>서비스 소개</li>
+      <li onClick={handleNavigateToPrice}>가격</li>
     </ul>
   );
 };
