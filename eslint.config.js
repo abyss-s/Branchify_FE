@@ -26,7 +26,7 @@ export default [
     rules: {
       quotes: ['error', 'single'],
       'react/prop-types': 'off',
-      'react/no-unknown-property': ['warn', { ignore: ['css'] }],
+      'react/no-unknown-property': ['error', { ignore: ['css'] }],
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
