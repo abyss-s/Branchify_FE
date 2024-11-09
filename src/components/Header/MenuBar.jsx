@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const menuStyle = css`
   display: flex;
+  flex-direction: row;
   gap: 20px;
   color: var(--gray-600, #6a6a6a);
   text-align: center;
@@ -13,6 +14,8 @@ const menuStyle = css`
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
+  white-space: nowrap;
+  overflow: visible;
 
   > li {
     padding: 5px 10px;
