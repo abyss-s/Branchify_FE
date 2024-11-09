@@ -2,6 +2,7 @@
 import { Outlet } from 'react-router-dom';
 import { css } from '@emotion/react';
 import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
 const layoutStyle = css`
   display: flex;
@@ -17,6 +18,7 @@ const Layout = () => {
       <div css={layoutStyle}>
         <Outlet />
       </div>
+      <Footer />
     </>
   );
 };
