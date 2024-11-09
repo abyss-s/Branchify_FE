@@ -8,7 +8,7 @@ const layoutStyle = css`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: azure; // test
+  background-color: white;
 `;
 
 const Layout = () => {
