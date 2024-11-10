@@ -18,8 +18,13 @@ const buttonStyle = css`
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
+
   &:hover {
     background-color: #dd4526;
+  }
+
+  @media (max-width: 768px) {
+    opacity: 0;
   }
 `;
 

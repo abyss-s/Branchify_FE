@@ -13,6 +13,10 @@ const headerStyle = css`
   margin: 0 auto;
   padding: 0 30px;
   z-index: 999;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
 `;
 
 const logoStyle = css`
