@@ -9,6 +9,7 @@ const mainStyle = css`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  margin-top: 20px;
 
   @media (max-width: 1000px) {
     flex-direction: column;
