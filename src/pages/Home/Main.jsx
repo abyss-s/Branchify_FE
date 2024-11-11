@@ -9,7 +9,12 @@ const mainStyle = css`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 50px;
+  padding: 4rem 12rem;
+
+  @media (max-width: 1440px) {
+    padding: 2rem 6rem;
+  }
 
   @media (max-width: 1000px) {
     flex-direction: column;
@@ -19,6 +24,10 @@ const mainStyle = css`
     p {
       font-size: 18px;
     }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
   }
 `;
 
