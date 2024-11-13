@@ -9,7 +9,7 @@ import BetaTesteButton from './BetatestBanner';
 import JoinForm from './JoinForm';
 
 const homeStyle = css`
-  /* 홈 스타일을 정의할 수 있습니다. */
+
 `;
 
 const Home = () => {
