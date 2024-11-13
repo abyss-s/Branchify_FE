@@ -1,13 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
 
 function JoinForm({ scrollToMain }) {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isFormVisible, setIsFormVisible] = useState(false); // 애니메이션 트리거 상태
-    const formRef = useRef(null); 
+    const [isFormVisible, setIsFormVisible] = useState(false);
+    const formRef = useRef(null);
 
     const validateEmail = (value) => {
         if (!value) {
@@ -25,42 +26,44 @@ function JoinForm({ scrollToMain }) {
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
-        const validationError = validateEmail(e.target.value);
-        setError(validationError);
+        setError(validateEmail(e.target.value));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const validationError = validateEmail(email);
+        const validationError = validateEmail(email); 
+    
         if (validationError) {
             setError(validationError);
         } else {
             setError('');
-            setIsModalOpen(true); // 모달창 열기
+            try {
+                await axios.post('http://101.101.217.98:8080/api/branchify/beta-tester', { email });
+                setIsModalOpen(true); // 모달창 열기
+                console.log('이메일 등록에 성공했습니다.', email);
+            } catch (error) {
+                console.error('Error submitting email:', error);
+                setError('이메일 등록에 실패했습니다. 다시 시도해 주세요.');
+            }
         }
     };
-
+    
     const closeModal = () => {
         setEmail('');
-        setIsModalOpen(false); // 모달창 닫기
-        scrollToMain(); // Main으로 스크롤
+        setIsModalOpen(false);
+        scrollToMain();
     };
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsFormVisible(true); // form이 보일 때 애니메이션 트리거
-                    observer.unobserve(entry.target); //애니메이션이 한 번만 실행되도록
-                }
+                setIsFormVisible(entry.isIntersecting);
             },
             { threshold: 0.1 }
         );
 
-        if (formRef.current) {
-            observer.observe(formRef.current);
-        }
-
+        if (formRef.current) observer.observe(formRef.current);
+        
         return () => {
             if (formRef.current) observer.unobserve(formRef.current);
         };
