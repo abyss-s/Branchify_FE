@@ -84,18 +84,21 @@ const imgStyle = css`
   animation: fadeIn 0.5s forwards;
 
   :nth-of-type(1) {
+    width: 386px;
     animation-delay: 0s;
     z-index: 3;
     top: 0;
     left: 0;
   }
   :nth-of-type(2) {
+    width: 331px;
     animation-delay: 0.5s;
     z-index: 2;
     top: 50px;
     left: 25px;
   }
   :nth-of-type(3) {
+    width: 269px;
     animation-delay: 1s;
     z-index: 1;
     top: 100px;

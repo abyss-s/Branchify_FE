@@ -30,7 +30,7 @@ const Header = () => {
       <div css={headerStyle}>
         {/* 로고 이미지 */}
         <div css={logoStyle}>
-          <img src={logoImage} alt="Logo" />
+          <img src={logoImage} alt="Logo" width='210px'/>
         </div>
         {/* 네비게이션 메뉴바 */}
         <MenuBar />
