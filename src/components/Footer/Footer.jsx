@@ -21,14 +21,14 @@ const textStyle = css`
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 `;
 
 const Footer = () => {
   return (
     <div css={footerStyle}>
       {/* 로고 이미지 */}
-      <img src={logoImage} alt="Logo" />
+      <img src={logoImage} alt="Logo" width="200px" />
       {/* 저작권 */}
       <p css={textStyle}>© 2024 Branchify. All rights reserved.</p>
       {/* GitHub 아이콘 */}
