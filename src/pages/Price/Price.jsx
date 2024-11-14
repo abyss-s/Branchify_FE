@@ -56,7 +56,7 @@ function Price() {
                         </div>
                         <div className="smallPlanContainer">
                             <div
-                                className={`planBox ${selectedPlan === 'indy' ? 'planBoxSelected' : ''}`}
+                                className={`planBox ${selectedPlan === 'induck' ? 'planBoxSelected' : ''}`}
                                 onClick={() => handlePlanClick('indy')}
                             >
                                 <h3 className="smallplanTitle">인덕이 플랜</h3>
@@ -64,7 +64,7 @@ function Price() {
                                 <p className="planMax">최대 사용 인원: 10명 이하</p>
                             </div>
                             <div
-                                className={`planBox ${selectedPlan === 'ahn' ? 'planBoxSelected' : ''}`}
+                                className={`planBox ${selectedPlan === 'ahnyong' ? 'planBoxSelected' : ''}`}
                                 onClick={() => handlePlanClick('ahn')}
                             >
                                 <h3 className="smallplanTitle">안뇽이 플랜</h3>
@@ -85,7 +85,7 @@ function Price() {
                     //연 결제
                     <div className="smallPlanContainer">
                         <div
-                            className={`planBox ${selectedPlan === 'indy' ? 'planBoxSelected' : ''}`}
+                            className={`planBox ${selectedPlan === 'induck' ? 'planBoxSelected' : ''}`}
                             onClick={() => handlePlanClick('indy')}
                         >
                             <h3 className="smallplanTitle">인덕이 플랜</h3>
@@ -94,7 +94,7 @@ function Price() {
                             <p className="planMax">최대 사용 인원: 10명 이하</p>
                         </div>
                         <div
-                            className={`planBox ${selectedPlan === 'ahn' ? 'planBoxSelected' : ''}`}
+                            className={`planBox ${selectedPlan === 'ahnyong' ? 'planBoxSelected' : ''}`}
                             onClick={() => handlePlanClick('ahn')}
                         >
                             <h3 className="smallplanTitle">안뇽이 플랜</h3>
