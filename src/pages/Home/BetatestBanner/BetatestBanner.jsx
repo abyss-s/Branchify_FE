@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { useRef } from 'react';
 import {
     containerStyle,
     title,
@@ -6,9 +7,14 @@ import {
     testtext,
     timetext,
     buttonStyle,
+    floatingAnimation,
 } from './BetatestStyle.js';
+import useVisibilityObserver from './useVisibilityObserver';
 
 function BetaTestButton({ scrollToJoinForm }) {
+    const buttonRef = useRef(null);
+    const isVisible = useVisibilityObserver(buttonRef);
+
     return (
         <div css={containerStyle}>
             <h2 css={title}>
@@ -16,7 +22,11 @@ function BetaTestButton({ scrollToJoinForm }) {
             </h2>
             <p css={testtext}>베타 테스트 기간</p>
             <p css={timetext}>2024.11.25 - 2024.12.9</p>
-            <button css={buttonStyle} onClick={scrollToJoinForm}>
+            <button
+                css={[buttonStyle, isVisible && floatingAnimation]}
+                ref={buttonRef}
+                onClick={scrollToJoinForm}
+            >
                 베타테스트 신청하러 가기
             </button>
         </div>

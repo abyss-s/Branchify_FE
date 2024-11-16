@@ -1,5 +1,18 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
+
+const floating = keyframes`
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+`;
+
+export const floatingAnimation = css`
+    animation: ${floating} 1s ease-in-out; 
+`;
 
 export const containerStyle = css`
     display: flex;
@@ -23,7 +36,6 @@ export const title = css`
 
 export const boldText = css`
     font-weight: bold;
-    font-size: 28px;
 `;
 
 export const testtext = css`
@@ -46,7 +58,7 @@ export const buttonStyle = css`
     font-size: 16px;
     font-weight: normal;
     color: #ffffff;
-    background-color: #F1502F;
+    background-color: #f1502f;
     border: none;
     border-radius: 5px;
     cursor: pointer;
