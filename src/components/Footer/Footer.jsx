@@ -5,14 +5,22 @@ import githubIcon from '../../assets/icons/github.png';
 
 const footerStyle = css`
   display: flex;
-  height: 250px;
+  height: 200px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   flex-shrink: 0;
   z-index: 999;
   background: #f5f5f5;
+`;
+
+const mailStyle = css`
+  color: gray;
+  font-family: 'Pretendard';
+  font-size: 14px;
+  font-style: normal;
+  margin-bottom: 10px;
 `;
 
 const textStyle = css`
@@ -29,6 +37,8 @@ const Footer = () => {
     <div css={footerStyle}>
       {/* 로고 이미지 */}
       <img src={logoImage} alt="Logo" width="200px" />
+      {/* 이메일 주소 */}
+      <h3 css={mailStyle}>merginginging@gmail.com</h3>
       {/* 저작권 */}
       <p css={textStyle}>© 2024 Branchify. All rights reserved.</p>
       {/* GitHub 아이콘 */}
