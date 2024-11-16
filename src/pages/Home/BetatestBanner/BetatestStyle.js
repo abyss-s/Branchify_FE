@@ -23,6 +23,7 @@ export const title = css`
 
 export const boldText = css`
     font-weight: bold;
+    font-size: 28px;
 `;
 
 export const testtext = css`
