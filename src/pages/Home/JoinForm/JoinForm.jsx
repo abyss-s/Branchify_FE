@@ -15,8 +15,10 @@ import {
     inputStyle,
     errorStyle,
     buttonStyle,
+    floatingAnimation,
 } from './JoinFormStyles';
 import Modal from './Modal';
+import useVisibilityObserver from '../BetatestBanner/useVisibilityObserver.js';
 
 function JoinForm({ scrollToMain }) {
     const [email, setEmail] = useState('');
@@ -24,6 +26,7 @@ function JoinForm({ scrollToMain }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isFormVisible, setIsFormVisible] = useState(false);
     const formRef = useRef(null);
+    const isVisible = useVisibilityObserver(formRef);
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -58,7 +61,7 @@ function JoinForm({ scrollToMain }) {
                 </span>
                 <span css={boldtitle}>베타 테스트에 지금 바로 신청하세요.</span>
             </h2>
-            <div ref={formRef} css={formStyle}>
+            <div ref={formRef} css={[formStyle, isVisible && floatingAnimation]}>
                 <h3 css={formTitleStyle}>신청서</h3>
                 <form onSubmit={handleSubmit}>
                     <div css={formRowStyle}>

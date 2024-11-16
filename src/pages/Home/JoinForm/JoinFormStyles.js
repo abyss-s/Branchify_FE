@@ -1,5 +1,18 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
+
+const floating = keyframes`
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+`;
+
+export const floatingAnimation = css`
+    animation: ${floating} 1s ease-in-out; 
+`;
 
 export const containerStyle = css`
     display: flex;
