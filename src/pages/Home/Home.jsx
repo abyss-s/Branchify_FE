@@ -6,7 +6,7 @@ import Section2 from './Section2';
 import Fy from './Fy';
 import Feature from './Feature';
 import BetaTesteButton from './BetatestBanner';
-import JoinForm from './JoinForm';
+import JoinForm from './JoinForm/JoinForm';
 
 const homeStyle = css`
 
