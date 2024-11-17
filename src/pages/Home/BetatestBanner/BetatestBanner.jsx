@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { useRef } from 'react';
+import { useSelector } from 'react-redux';
 import {
     containerStyle,
     title,
@@ -11,9 +12,16 @@ import {
 } from './BetatestStyle.js';
 import useVisibilityObserver from './useVisibilityObserver';
 
-function BetaTestButton({ scrollToJoinForm }) {
+function BetaTestButton() {
     const buttonRef = useRef(null);
     const isVisible = useVisibilityObserver(buttonRef);
+    const scrollToJoinForm = useSelector((state) => state.scroll.scrollToJoinForm);
+
+    const handleClick = () => {
+        if (scrollToJoinForm) {
+            scrollToJoinForm(); // JoinForm으로 스크롤하는 함수 호출
+        }
+    };
 
     return (
         <div css={containerStyle}>
@@ -25,7 +33,7 @@ function BetaTestButton({ scrollToJoinForm }) {
             <button
                 css={[buttonStyle, isVisible && floatingAnimation]}
                 ref={buttonRef}
-                onClick={scrollToJoinForm}
+                onClick={handleClick} // 클릭 시 스크롤 메서드 호출
             >
                 베타테스트 신청하러 가기
             </button>
