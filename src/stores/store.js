@@ -3,16 +3,16 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 const scrollSlice = createSlice({
   name: 'scroll',
   initialState: {
-    scrollToJoinForm: null,
+    shouldScrollToJoinForm: false,
   },
   reducers: {
-    setScrollToJoinForm(state, action) {
-      state.scrollToJoinForm = action.payload;
+    setShouldScrollToJoinForm(state, action) {
+      state.shouldScrollToJoinForm = action.payload;
     },
   },
 });
 
-export const { setScrollToJoinForm } = scrollSlice.actions;
+export const { setShouldScrollToJoinForm } = scrollSlice.actions;
 
 const store = configureStore({
   reducer: {
