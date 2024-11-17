@@ -50,6 +50,7 @@ const paragraphStyle = css`
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.41px;
+  text-align: center;
 `;
 
 const Feature = () => {
@@ -57,7 +58,8 @@ const Feature = () => {
     <div css={containerStyle}>
       <h1 css={titleStyle}>파이는 이런 일을 할 수 있어요.</h1>
       <p css={paragraphStyle}>
-        협업툴에서 발생한 그날의 변경사항을 요약해서 전달해요.
+        연동된 협업툴에서 발생한 변경사항을 요약해서 전달해요.<br/>
+        daily & weekly 요약본을 제공해줄게요!
       </p>
       <img src={feature1} alt="" />
     </div>
