@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setScrollToJoinForm } from '../../stores/store';
 
 const buttonStyle = css`
   display: flex;
@@ -28,8 +30,21 @@ const buttonStyle = css`
   }
 `;
 
-const HeaderButton = ({ text }) => {
-  return <button css={buttonStyle}>{text}</button>;
+const HeaderButton = ({ text, onClick }) => {
+  const dispatch = useDispatch();
+  const scrollToJoinForm = useSelector((state) => state.scroll.scrollToJoinForm);
+
+  const handleClick = () => {
+    if (scrollToJoinForm) {
+      scrollToJoinForm();
+    }
+  };
+
+  return (
+    <button css={buttonStyle} onClick={handleClick}>
+      {text}
+    </button>
+  );
 };
 
 export default HeaderButton;
