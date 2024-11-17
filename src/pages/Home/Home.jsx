@@ -3,9 +3,11 @@ import { css } from '@emotion/react';
 import { useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Main from '../../pages/Home/Main/Main';
+import Intro from '../../pages/Home/Intro';
 import Section2 from './Section2';
 import Fy from './Fy';
 import Feature from './Feature';
+import Feature2 from './Feature2';
 import BetaTestButton from './BetatestBanner/BetatestBanner';
 import JoinForm from './JoinForm/JoinForm';
 import { setShouldScrollToJoinForm } from '../../stores/store';
@@ -36,10 +38,12 @@ const Home = () => {
       <div ref={mainSectionRef}>
         <Main />
       </div>
+      <Intro />
       <Section2 />
       <BetaTestButton />
       <Fy />
       <Feature />
+      <Feature2 />
       <div ref={joinFormSectionRef}>
         <JoinForm scrollToMain={scrollToMainSection} />
       </div>
