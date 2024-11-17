@@ -1,46 +1,47 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Main from '../../pages/Home/Main/Main';
 import Section2 from './Section2';
 import Fy from './Fy';
 import Feature from './Feature';
-import Feature2 from '../Home/Feature2'
-import BetaTesteButton from './BetatestBanner/BetatestBanner';
+import BetaTestButton from './BetatestBanner/BetatestBanner';
 import JoinForm from './JoinForm/JoinForm';
+import { setShouldScrollToJoinForm } from '../../stores/store';
 
-const homeStyle = css`
-
-`;
+const homeStyle = css``;
 
 const Home = () => {
-  const mainRef = useRef(null); 
-  const joinFormRef = useRef(null); 
+  const dispatch = useDispatch();
+  const shouldScrollToJoinForm = useSelector((state) => state.scroll.shouldScrollToJoinForm);
+  const mainSectionRef = useRef(null);
+  const joinFormSectionRef = useRef(null);
 
-  const scrollToMain = () => {
-    if (mainRef.current) {
-      mainRef.current.scrollIntoView({ behavior: 'smooth' });
+  useEffect(() => {
+    if (shouldScrollToJoinForm && joinFormSectionRef.current) {
+      joinFormSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      dispatch(setShouldScrollToJoinForm(false)); // 스크롤 완료 후 상태 초기화
     }
-  };
+  }, [shouldScrollToJoinForm, dispatch]);
 
-  const scrollToJoinForm = () => {
-    if (joinFormRef.current) {
-      joinFormRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToMainSection = () => {
+    if (mainSectionRef.current) {
+      mainSectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <div css={homeStyle}>
-      <div ref={mainRef}>
-        <Main /> {/* 메인 서비스 타이틀 */}
+      <div ref={mainSectionRef}>
+        <Main />
       </div>
-      <Section2 /> {/* 기능 소개 */}
-      <BetaTesteButton scrollToJoinForm={scrollToJoinForm} /> {/* 베타 테스트 배너 */}
-      <Fy /> {/* 파이 소개 */}
-      <Feature /> {/* 기능 상세 소개 */}
-      <Feature2 /> {/* 기능 상세 소개 */}
-      <div ref={joinFormRef}>
-        <JoinForm scrollToMain={scrollToMain} /> {/* 베타 테스트 참여 폼 */}
+      <Section2 />
+      <BetaTestButton />
+      <Fy />
+      <Feature />
+      <div ref={joinFormSectionRef}>
+        <JoinForm scrollToMain={scrollToMainSection} />
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { useDispatch } from 'react-redux';
+import { setShouldScrollToJoinForm } from '../../stores/store';
 
 const buttonStyle = css`
   display: flex;
@@ -29,7 +31,17 @@ const buttonStyle = css`
 `;
 
 const HeaderButton = ({ text }) => {
-  return <button css={buttonStyle}>{text}</button>;
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(setShouldScrollToJoinForm(true));
+  };
+
+  return (
+    <button css={buttonStyle} onClick={handleClick}>
+      {text}
+    </button>
+  );
 };
 
 export default HeaderButton;

@@ -24,7 +24,7 @@ const logoStyle = css`
   align-items: center;
 `;
 
-const Header = () => {
+const Header = ({ onButtonClick }) => {
   return (
     <>
       <div css={headerStyle}>
@@ -35,7 +35,7 @@ const Header = () => {
         {/* 네비게이션 메뉴바 */}
         <MenuBar />
         {/* 버튼 */}
-        <HeaderButton text="지금 도입하러 가기 ->" />
+        <HeaderButton text="지금 도입하러 가기 ->" onClick={onButtonClick}/>
       </div>
     </>
   );

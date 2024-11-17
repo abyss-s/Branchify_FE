@@ -63,17 +63,17 @@ const Section2 = () => {
           content="Jira, Slack 등 여러 개의 협업 툴을 하나의 도구로 관리"
         />
         <Box
-          images={[<img src={gptIcon} alt="GPTIcon" />]}
+          images={[<img key="gpt" src={gptIcon} alt="GPTIcon" />]}
           title="데일리 업데이트"
           content="AI 실시간 분석을 통한 변경사항 요약 매일 제공"
         />
         <Box
-          images={[<img src={ticketIcon} alt="TicketIcon" />]}
+          images={[<img key="ticket" src={ticketIcon} alt="TicketIcon" />]}
           title="이미지로 티켓 생성"
           content="슬랙 메세지에 이모지로 반응하면 Jira에서 바로 티켓 생성"
         />
         <Box
-          images={[<img src={slackIcon} alt="SlackIcon" />]}
+          images={[<img key="slack" src={slackIcon} alt="SlackIcon" />]}
           title="별도 설치 없이 간편하게"
           content="슬랙봇 플러그인으로 간단한 설치와 쉬운 사용법"
         />
