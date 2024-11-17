@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { useRef } from 'react';
-import Main from './Main';
+import Main from '../../pages/Home/Main/Main';
 import Section2 from './Section2';
 import Fy from './Fy';
 import Feature from './Feature';
