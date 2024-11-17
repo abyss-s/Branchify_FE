@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <div css={homeStyle}>
-      <div ref={mainSectionRef}>
+      <div ref={mainSectionRef} id='main-section'>
         <Main />
       </div>
       <Intro />
