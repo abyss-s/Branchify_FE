@@ -1,10 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { useRef } from 'react';
-import Main from './Main';
+import Main from '../../pages/Home/Main/Main';
 import Section2 from './Section2';
 import Fy from './Fy';
 import Feature from './Feature';
+import Feature2 from '../Home/Feature2'
 import BetaTesteButton from './BetatestBanner/BetatestBanner';
 import JoinForm from './JoinForm/JoinForm';
 
@@ -37,6 +38,7 @@ const Home = () => {
       <BetaTesteButton scrollToJoinForm={scrollToJoinForm} /> {/* 베타 테스트 배너 */}
       <Fy /> {/* 파이 소개 */}
       <Feature /> {/* 기능 상세 소개 */}
+      <Feature2 /> {/* 기능 상세 소개 */}
       <div ref={joinFormRef}>
         <JoinForm scrollToMain={scrollToMain} /> {/* 베타 테스트 참여 폼 */}
       </div>
