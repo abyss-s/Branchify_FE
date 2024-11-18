@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useState, useRef } from 'react';
-import { validateEmail } from './validation';
-import { submitEmail } from './api';
+import { validateEmail } from './Validation';
+import { submitEmail } from './Api';
 import { useObserver } from './useObserver';
 import {
     containerStyle,
