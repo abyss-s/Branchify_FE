@@ -30,7 +30,6 @@ export const mainStyle = css`
     export const lnbStyle = css`
     display: flex;
     flex-direction: column;
-    width: 594px;
     `;
 
     export const h1Style = css`
