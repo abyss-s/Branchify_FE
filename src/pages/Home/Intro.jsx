@@ -17,9 +17,9 @@ const containerStyle = css`
     }
 
     @media (max-width: 768px) {
-        padding: 4rem 0;
+        padding: 4rem 1rem;
         h1 {
-        font-size: 24px;
+        font-size: 20px;
         }
         p {
         font-size: 16px;
@@ -33,20 +33,20 @@ const containerStyle = css`
     const titleStyle = css`
         overflow: hidden;
         color: var(--Labels-Primary, #000);
-        font-family: 'Pretendard';
+        font-family: 'Pretendard-Bold';
         font-size: 28px;
         font-style: normal;
         font-weight: 700;
-        line-height: 56px;
+        line-height: 1.5rem;
         letter-spacing: 0.31px;
     `;
 
     const paragraphStyle = css`
     color: gray;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Semibold';
     font-size: 20px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.4px;
     text-align: center;
@@ -54,15 +54,21 @@ const containerStyle = css`
 
     const sectionStyle = css`
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
     margin-top: 40px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+    }
     `;
 
     const textStyle = css`
     color: black;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Medium';
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

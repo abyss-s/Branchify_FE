@@ -5,7 +5,7 @@ export const mainStyle = css`
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin-top: 50px;
+    margin-top: 70px;
     padding: 4rem 12rem;
 
     @media (max-width: 1440px) {
@@ -13,9 +13,13 @@ export const mainStyle = css`
     }
 
     @media (max-width: 1000px) {
+        padding: 2rem 6rem;
         flex-direction: column;
         h1 {
-        font-size: 40px;
+        font-size: 36px;
+        }
+        span{
+            font-size: 36px;
         }
         p {
         font-size: 18px;
@@ -23,7 +27,17 @@ export const mainStyle = css`
     }
 
     @media (max-width: 768px) {
-        padding: 2rem 1rem;
+        padding: 2rem 2rem;
+        flex-direction: column;
+        h1 {
+        font-size: 34px;
+        }
+        span{
+            font-size: 34px;
+        }
+        p {
+        font-size: 16px;
+        }
     }
     `;
 
@@ -34,7 +48,7 @@ export const mainStyle = css`
 
     export const h1Style = css`
     color: #000;
-    font-family: 'Pretendard Variable';
+    font-family: 'Pretendard-Bold';
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
@@ -56,13 +70,12 @@ export const mainStyle = css`
 
     export const pStyle = css`
     color: var(--gray-600, #6a6a6a);
-    font-family: 'Pretendard Variable';
+    font-family: 'Pretendard-Semibold';
     font-size: 20px;
     font-style: normal;
-    font-weight: 600;
     letter-spacing: -1px;
     line-height: 24px;
-    padding-top: 20px;
+    padding-top: 2rem;
     `;
 
     export const rnbStyle = css`

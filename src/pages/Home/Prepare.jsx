@@ -46,7 +46,7 @@ const titleStyle = css`
   }
 `;
 
-const Section2 = () => {
+const Prepare = () => {
   const images = [
     <img key="discord" src={discordIcon} alt="DiscordIcon" />,
     <img key="notion" src={notionIcon} alt="NotionIcon" />,
@@ -82,4 +82,4 @@ const Section2 = () => {
   );
 };
 
-export default Section2;
+export default Prepare;
