@@ -22,7 +22,7 @@ export const containerStyle = css`
     background-color: black;
     color: white;
     height: 100vh;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Semibold';
     letter-spacing: 0.7;
 `;
 
@@ -58,7 +58,7 @@ export const formStyle = css`
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 400px;
+    width: auto;
     transition: opacity 0.5s ease, transform 0.5s ease;
 `;
 
@@ -96,6 +96,7 @@ export const inputStyle = css`
 
     &::placeholder {
         color: lightgray;
+        font-family: 'Pretendard-Regular';
     }
 
     &:focus {
@@ -124,7 +125,7 @@ export const buttonStyle = css`
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Bold';
 
     &:hover {
         background-color: #dd4526;

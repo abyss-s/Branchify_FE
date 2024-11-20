@@ -19,23 +19,28 @@ export const containerStyle = css`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70vh;
     background-color: black;
     color: #ffffff;
     text-align: center;
-    font-family: 'Pretendard';
     letter-spacing: 1px;
+    padding: 200px 1rem;
 `;
 
 export const title = css`
-    font-size: 26px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 600;
     line-height: 1.5;
+
+    @media (max-width: 768px) {
+        font-size: 22px;
+    }
+
 `;
 
 export const boldText = css`
     font-weight: bold;
+    font-family: 'Pretendard-Bold';
 `;
 
 export const testtext = css`
@@ -44,12 +49,14 @@ export const testtext = css`
     margin-bottom: 5px;
     margin-top: 40px;
     color: gray;
+    font-family: 'Pretendard-Semibold';
 `;
 
 export const timetext = css`
     font-size: 18px;
     font-weight: normal;
     margin-bottom: 10px;
+    font-family: 'Pretendard-Semibold';
 `;
 
 export const buttonStyle = css`
@@ -63,7 +70,7 @@ export const buttonStyle = css`
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Bold';
 
     &:hover {
         background-color: #dd4526;

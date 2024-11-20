@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Main from '../../pages/Home/Main/Main';
 import Intro from '../../pages/Home/Intro';
-import Section2 from './Section2';
+import Prepare from './Prepare';
 import Fy from './Fy';
 import Feature from './Feature';
 import Feature2 from './Feature2';
@@ -16,7 +16,9 @@ const homeStyle = css``;
 
 const Home = () => {
   const dispatch = useDispatch();
-  const shouldScrollToJoinForm = useSelector((state) => state.scroll.shouldScrollToJoinForm);
+  const shouldScrollToJoinForm = useSelector(
+    (state) => state.scroll.shouldScrollToJoinForm
+  );
   const mainSectionRef = useRef(null);
   const joinFormSectionRef = useRef(null);
 
@@ -35,11 +37,11 @@ const Home = () => {
 
   return (
     <div css={homeStyle}>
-      <div ref={mainSectionRef} id='main-section'>
+      <div ref={mainSectionRef} id="main-section">
         <Main />
       </div>
       <Intro />
-      <Section2 />
+      <Prepare />
       <BetaTestButton />
       <Fy />
       <Feature />
