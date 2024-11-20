@@ -7,6 +7,7 @@ import discordIcon from '../../assets/icons/discord.png';
 import notionIcon from '../../assets/icons/notion.png';
 import gptIcon from '../../assets/icons/chatgpt.png';
 import ticketIcon from '../../assets/icons/ticket.png';
+import { motion } from 'framer-motion';
 
 const containerStyle = css`
   display: flex;
@@ -57,26 +58,54 @@ const Prepare = () => {
     <div css={containerStyle}>
       <div css={titleStyle}>그런 여러분을 위해서 브랜치파이가 준비했어요.</div>
       <div css={sectionStyle}>
-        <Box
-          images={images}
-          title="협업툴 올인원 관리"
-          content="Jira, Slack 등 여러 개의 협업 툴을 하나의 도구로 관리"
-        />
-        <Box
-          images={[<img key="gpt" src={gptIcon} alt="GPTIcon" />]}
-          title="데일리 업데이트"
-          content="AI 실시간 분석을 통한 변경사항 요약 매일 제공"
-        />
-        <Box
-          images={[<img key="ticket" src={ticketIcon} alt="TicketIcon" />]}
-          title="이미지로 티켓 생성"
-          content="슬랙 메세지에 이모지로 반응하면 Jira에서 바로 티켓 생성"
-        />
-        <Box
-          images={[<img key="slack" src={slackIcon} alt="SlackIcon" />]}
-          title="별도 설치 없이 간편하게"
-          content="슬랙봇 플러그인으로 간단한 설치와 쉬운 사용법"
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ y: { duration: 1 }, opacity: { duration: 0.5 } }}
+        >
+          <Box
+            images={images}
+            title="협업툴 올인원 관리"
+            content="Jira, Slack 등 여러 개의 협업 툴을 하나의 도구로 관리"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ y: { duration: 1 }, opacity: { duration: 0.5 } }}
+        >
+          <Box
+            images={[<img key="gpt" src={gptIcon} alt="GPTIcon" />]}
+            title="데일리 업데이트"
+            content="AI 실시간 분석을 통한 변경사항 요약 매일 제공"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ y: { duration: 1 }, opacity: { duration: 0.5 } }}
+        >
+          <Box
+            images={[<img key="ticket" src={ticketIcon} alt="TicketIcon" />]}
+            title="이미지로 티켓 생성"
+            content="슬랙 메세지에 이모지로 반응하면 Jira에서 바로 티켓 생성"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ y: { duration: 1 }, opacity: { duration: 0.5 } }}
+        >
+          <Box
+            images={[<img key="slack" src={slackIcon} alt="SlackIcon" />]}
+            title="별도 설치 없이 간편하게"
+            content="슬랙봇 플러그인으로 간단한 설치와 쉬운 사용법"
+          />
+        </motion.div>
       </div>
     </div>
   );

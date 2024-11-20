@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { motion } from 'framer-motion';
 import feature2 from '../../assets/images/feature-2.png';
 
 const containerStyle = css`
@@ -11,9 +12,10 @@ const containerStyle = css`
   align-items: center;
   gap: 20px;
   padding: 6rem 0;
+  font-family: 'Pretendard-Semibold';
 
   img {
-    width:60%;
+    width: 60%;
   }
 
   @media (max-width: 768px) {
@@ -32,9 +34,7 @@ const containerStyle = css`
 
 const paragraphStyle = css`
   color: black;
-  font-family: 'Pretendard';
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.4px;
@@ -42,16 +42,23 @@ const paragraphStyle = css`
   text-align: center;
 `;
 
-const Feature = () => {
+const Feature2 = () => {
   return (
-    <div css={containerStyle}>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ y: { duration: 1 }, opacity: { duration: 0.5 } }}
+      css={containerStyle}
+    >
       <p css={paragraphStyle}>
-      Slack에서 이모지 하나만 달아도 한번에 Jira와 Notion에 이슈 생성!<br />
-      파이와 함께라면 더 이상 번거롭게 일할 필요가 없어요. 🫢
+        Slack에서 이모지 하나만 달아도 한번에 Jira와 Notion에 이슈 생성!
+        <br />
+        파이와 함께라면 더 이상 번거롭게 일할 필요가 없어요. 🫢
       </p>
       <img src={feature2} alt="" />
-    </div>
+    </motion.div>
   );
 };
 
-export default Feature;
+export default Feature2;
