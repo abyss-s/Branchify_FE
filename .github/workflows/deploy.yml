@@ -13,14 +13,14 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v4
         with: 
-          token: ${{ secrets.AUTO_ACTIONS }}
+          token: ${{ secrets.BRANCHIFY_TOKEN }}
           fetch-depth: 0
           ref: main
 
       - name: Add remote-url
         run: |
-          git remote add forked-repo https://[your-github-name]:${{ secrets.AUTO_ACTIONS }}@github.com/[your-github-name]/[your-repo-name]
-          git config user.name [your-github-name]
+          git remote add forked-repo https://github.com/merging-Branchify/Branchify_FE:${{ secrets.BRANCHIFY_TOKEN }}@github.com/abyss-s/Branchify_FE
+          git config user.name abyss-s
           git config user.email ${{ secrets.EMAIL }}
       
       - name: Push changes to forked-repo 
@@ -30,4 +30,3 @@ jobs:
       - name: Clean up
         run: |
           git remote remove forked-repo
-출처: https://datdaradanadat.tistory.com/177 [닿망징창 여정:티스토리]
