@@ -105,12 +105,18 @@ nav,
 section {
   display: block;
 }
+html,
 body {
   line-height: 1;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
 }
 ol,
-ul {
+ul,
+li {
   list-style: none;
+  padding-left: 0;
+  margin-left: 0;
 }
 blockquote,
 q {

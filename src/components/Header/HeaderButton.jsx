@@ -26,7 +26,7 @@ const buttonStyle = css`
   }
 
   @media (max-width: 768px) {
-    opacity: 0;
+    display: none;
   }
 `;
 

@@ -22,7 +22,7 @@ function Price() {
                     <div className="title">요금제 안내</div>
                     <div className="subtitle">기업에게 필요한 만큼! <br />합리적인 맞춤형 요금제를 통하여 관리해보세요.</div>
                 </div>
-                <img className="fy-img" src={Fyimg} alt="" />
+                <img className="fy-img" src={Fyimg} alt="Fyimg" />
             </div>
             {/* 토글 */}
             <div className="toggleContainer">

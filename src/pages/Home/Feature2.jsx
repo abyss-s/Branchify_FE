@@ -11,7 +11,7 @@ const containerStyle = css`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 6rem 0;
+  padding: 6rem 1rem;
   font-family: 'Pretendard-Semibold';
 
   img {
@@ -19,15 +19,12 @@ const containerStyle = css`
   }
 
   @media (max-width: 768px) {
-    padding: 4rem 0;
-    h1 {
+    padding: 4rem 1rem;
+    p {
       font-size: 24px;
     }
-    p {
-      font-size: 16px;
-    }
     img {
-      width: 95%;
+      width: 90%;
     }
   }
 `;
@@ -36,7 +33,7 @@ const paragraphStyle = css`
   color: black;
   font-size: 20px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 30px;
   letter-spacing: -0.4px;
   margin-bottom: 30px;
   text-align: center;

@@ -27,10 +27,14 @@ export const containerStyle = css`
 `;
 
 export const title = css`
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.5;
+    color: white;
+  font-family: 'Pretendard-Bold';
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.4rem;
+  letter-spacing: -1.6px;
+  text-align: center;
 
     @media (max-width: 768px) {
         font-size: 22px;
@@ -50,6 +54,7 @@ export const testtext = css`
     margin-top: 40px;
     color: gray;
     font-family: 'Pretendard-Semibold';
+    letter-spacing: -0.6px;
 `;
 
 export const timetext = css`
@@ -57,6 +62,7 @@ export const timetext = css`
     font-weight: normal;
     margin-bottom: 10px;
     font-family: 'Pretendard-Semibold';
+    letter-spacing: -0.6px;
 `;
 
 export const buttonStyle = css`
