@@ -9,6 +9,7 @@ const layoutStyle = css`
   flex-direction: column;
   min-height: 100vh;
   background-color: white;
+  min-width: 355px;
 `;
 
 const Layout = () => {

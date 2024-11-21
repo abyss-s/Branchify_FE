@@ -20,25 +20,25 @@ const containerStyle = css`
   @media (max-width: 768px) {
     padding: 4rem 1rem;
     h1 {
-      font-size: 20px;
+      font-size: 30px;
     }
     p {
-      font-size: 16px;
+      font-size: 20px;
     }
     img {
-      width: 50%;
+      width: 100%;
     }
   }
 `;
 
 const titleStyle = css`
-  overflow: hidden;
-  color: var(--Labels-Primary, #000);
+  color: #000;
   font-family: 'Pretendard-Bold';
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.5rem;
-  letter-spacing: 0.31px;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -2.4px;
 `;
 
 const paragraphStyle = css`
@@ -47,7 +47,7 @@ const paragraphStyle = css`
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
-  letter-spacing: -0.4px;
+  letter-spacing: -1.4px;
   text-align: center;
 `;
 
@@ -57,7 +57,7 @@ const sectionStyle = css`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-top: 40px;
+  padding-top: 40px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -68,10 +68,10 @@ const sectionStyle = css`
 const textStyle = css`
   color: black;
   font-family: 'Pretendard-Medium';
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: -0.4px;
+  letter-spacing: -1.4px;
   margin-bottom: 40px;
 `;
 
@@ -84,7 +84,9 @@ const Feature = () => {
       transition={{ y: { duration: 1 }, opacity: { duration: 0.5 } }}
       css={containerStyle}
     >
-      <h1 css={titleStyle}>혹시 팀원들과 소통하면서 불편함을 느끼신 적이 있나요?</h1>
+      <h1 css={titleStyle}>
+        혹시 팀원들과 소통하면서 불편함을 느끼신 적이 있나요?
+      </h1>
       <p css={paragraphStyle}>
         Slack과 SaaS의 통합으로 소통과 협업의 새로운 기준을 만들어 보세요.
       </p>
@@ -92,7 +94,8 @@ const Feature = () => {
         <img src={intro} alt="" />
         <p css={textStyle}>
           ‘왜 맨날 중요한 정보가 누락되고 <br />
-          같은 말을 다르게 이해해서 오해가 생기고<br />
+          같은 말을 다르게 이해해서 오해가 생기고
+          <br />
           서로의 맥락을 놓쳐 협업이 어긋나는 걸까?’
         </p>
       </motion.div>

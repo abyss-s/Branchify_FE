@@ -44,7 +44,7 @@ const contentStyle = css`
   line-height: normal;
   letter-spacing: -1.17px;
   padding-top: 5px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 `;
 
 const Box = ({ images, title, content }) => {

@@ -1,6 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { mainStyle, lnbStyle, h1Style, spanStyle, pStyle, rnbStyle, imgStyle } from './MainStyle.js';
+import {
+  mainStyle,
+  lnbStyle,
+  h1Style,
+  spanStyle,
+  pStyle,
+  rnbStyle,
+  imgStyle,
+} from './MainStyle.js';
 import useVisibleAnimation from './useVisibleAnimation';
 import markIcon from '../../../assets/icons/mark.png';
 import msg1 from '../../../assets/images/message-1.png';
@@ -25,15 +33,16 @@ const Main = () => {
         />
         <h1 css={h1Style}>익숙함을 넘어 탁월함으로,</h1>
         <h1 css={h1Style}>
-        협업의 새로운 기준        <br />
+          협업의 새로운 기준 <br />
           <span css={spanStyle}>
             <span className="highlight">B</span>ranchify
           </span>{' '}
           입니다.
         </h1>
         <p css={pStyle}>
-        끝없는 회의와 답답한 대화에서 오는 피로감 , 이제는 안녕! 👋 <br />
-        팀의 프로젝트를 완벽히 이해하고 더 나은 소통을 시작할 시간이에요.
+          끝없는 회의와 답답한 대화에서 오는 피로감, 이제는 안녕👋
+          <br />
+          팀의 프로젝트를 완벽히 이해하고 더 나은 소통을 시작할 시간이에요.
         </p>
       </div>
       {/* 오른쪽 */}
