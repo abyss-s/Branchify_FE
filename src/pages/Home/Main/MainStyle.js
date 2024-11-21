@@ -5,6 +5,7 @@ export const mainStyle = css`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  align-items: center;
   margin-top: 70px;
   padding: 4rem 12rem;
 
@@ -27,7 +28,7 @@ export const mainStyle = css`
   }
 
   @media (max-width: 768px) {
-    padding: 2rem 2rem;
+    padding: 2rem 3rem;
     flex-direction: column;
     h1 {
       font-size: 32px;
@@ -74,7 +75,7 @@ export const pStyle = css`
   font-size: 20px;
   font-style: normal;
   letter-spacing: -1px;
-  line-height: 24px;
+  line-height: 30px;
   padding-top: 2rem;
 `;
 
@@ -83,7 +84,14 @@ export const rnbStyle = css`
   flex-direction: column;
   width: 386px;
   position: relative;
-  margin-top: 100px;
+
+  @media (max-width: 1000px) {
+    margin-top: 70px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
 `;
 
 export const imgStyle = css`
