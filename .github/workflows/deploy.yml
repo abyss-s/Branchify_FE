@@ -1,32 +1,27 @@
-name: Synchronize to forked repo
+name: Update on Main Branch Changes
 on:
   push:
     branches:
       - main
 
 jobs:
-  sync:
-    name: Sync forked repo
+  update:
+    name: Update Development Branch
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
-        with: 
+        with:
           token: ${{ secrets.BRANCHIFY_TOKEN }}
           fetch-depth: 0
           ref: main
 
-      - name: Add remote-url
+      - name: Create or Update Development Branch
         run: |
-          git remote add forked-repo https://${{ secrets.BRANCHIFY_TOKEN }}@github.com/abyss-s/Branchify_FE.git
-          git config user.name abyss-s
-          git config user.email ${{ secrets.EMAIL }}
-      
-      - name: Push changes to forked-repo 
+          git checkout -B dev
+          git merge main
+
+      - name: Push to Development Branch
         run: |
-          git push -f forked-repo main
-      
-      - name: Clean up
-        run: |
-          git remote remove forked-repo
+          git push origin dev -f
