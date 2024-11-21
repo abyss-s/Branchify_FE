@@ -19,7 +19,7 @@ jobs:
 
       - name: Add remote-url
         run: |
-          git remote add forked-repo https://github.com/merging-Branchify/Branchify_FE:${{ secrets.BRANCHIFY_TOKEN }}@github.com/abyss-s/Branchify_FE
+          git remote add forked-repo https://${{ secrets.BRANCHIFY_TOKEN }}@github.com/abyss-s/Branchify_FE.git
           git config user.name abyss-s
           git config user.email ${{ secrets.EMAIL }}
       
