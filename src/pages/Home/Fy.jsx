@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { motion } from 'framer-motion';
 import fyImage from '../../assets/images/fy.png';
 
 const containerStyle = css`
@@ -15,10 +16,10 @@ const containerStyle = css`
     flex-direction: column;
     padding: 2rem 1rem;
     h1 {
-        font-size: 24px;
+      font-size: 24px;
     }
-    p{
-        font-size: 16px;
+    p {
+      font-size: 16px;
     }
     img {
       width: 50%;
@@ -29,9 +30,8 @@ const containerStyle = css`
 const titleStyle = css`
   overflow: hidden;
   color: var(--Labels-Primary, #000);
-  font-family: 'Pretendard';
+  font-family: 'Pretendard-Bold';
   font-size: 28px;
-  font-style: normal;
   font-weight: 700;
   line-height: 56px;
   letter-spacing: 0.31px;
@@ -39,9 +39,8 @@ const titleStyle = css`
 
 const paragraphStyle = css`
   color: var(--Labels-Secondary, rgba(60, 60, 67, 0.6));
-  font-family: 'Pretendard';
+  font-family: 'Pretendard-Semibold';
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.41px;
@@ -49,7 +48,13 @@ const paragraphStyle = css`
 
 const Fy = () => {
   return (
-    <div css={containerStyle}>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ y: { duration: 1 }, opacity: { duration: 0.5 } }}
+      css={containerStyle}
+    >
       <img src={fyImage} alt="" />
       <div>
         <h1 css={titleStyle}>안녕하세요. 저는 ‘파이’에요!</h1>
@@ -58,7 +63,7 @@ const Fy = () => {
           프로젝트 변경사항은 걱정 마세요! 제가 깔끔하게 정리해서 매일 아침 알려드릴게요 🌤️️ 
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

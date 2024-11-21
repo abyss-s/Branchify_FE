@@ -1,8 +1,8 @@
 {
-    "rewrites": [
-        {
-            "source": "/branchify/:path*",
-            "destination": "http://101.101.217.98:8080/:path*"
-        }
-        ]
+  "rewrites": [
+    {
+      "source": "/branchify/:path*",
+      "destination": "http://101.101.217.98:8080/:path*"
     }
+  ]
+}

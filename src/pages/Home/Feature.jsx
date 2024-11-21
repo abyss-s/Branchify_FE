@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { motion } from 'framer-motion';
 import feature1 from '../../assets/images/feature-1.png';
 
 const containerStyle = css`
@@ -34,9 +35,8 @@ const containerStyle = css`
 const titleStyle = css`
   overflow: hidden;
   color: var(--Labels-Primary, #000);
-  font-family: 'Pretendard';
+  font-family: 'Pretendard-Bold';
   font-size: 28px;
-  font-style: normal;
   font-weight: 700;
   line-height: 56px;
   letter-spacing: 0.31px;
@@ -44,9 +44,8 @@ const titleStyle = css`
 
 const paragraphStyle = css`
   color: var(--Labels-Secondary, rgba(60, 60, 67, 0.6));
-  font-family: 'Pretendard';
+  font-family: 'Pretendard-Semibold';
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.41px;
@@ -55,14 +54,21 @@ const paragraphStyle = css`
 
 const Feature = () => {
   return (
-    <div css={containerStyle}>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ y: { duration: 1 }, opacity: { duration: 0.5 } }}
+      css={containerStyle}
+    >
       <h1 css={titleStyle}>파이는 이런 일을 할 수 있어요.</h1>
       <p css={paragraphStyle}>
-        연동된 협업툴에서 발생한 변경사항을 요약해서 전달해요.<br/>
+        연동된 협업툴에서 발생한 변경사항을 요약해서 전달해요.
+        <br />
         daily & weekly 요약본을 제공해줄게요!
       </p>
       <img src={feature1} alt="" />
-    </div>
+    </motion.div>
   );
 };
 

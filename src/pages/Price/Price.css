@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Pretendard';
+  font-family: 'Pretendard-Semibold';
   color: black;
-  padding: 20px;
   letter-spacing: 0.7px;
-  margin-top: 30px;
   width: 100%;
   max-width: 1200px;
-  margin: 30px auto;
+  margin-top: 70px;
+  padding: 0.8rem;
 }
 
 .main-container {
@@ -34,6 +33,9 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  font-family: 'Pretendard-Bold';
+  fon-weight: 700;
+  line-height: 1.6rem;
 }
 
 .subtitle {
@@ -41,6 +43,7 @@
   color: gray;
   margin-bottom: 20px;
   line-height: 1.4;
+  font-family: 'Pretendard-Semibold';
 }
 
 .fy-img {
@@ -60,6 +63,7 @@
   width: 230px;
   height: 50px;
   border-radius: 30px;
+  font-family: 'Pretendard-Bold';
 }
 
 .toggleLabel {
@@ -177,6 +181,7 @@
   font-weight: bold;
   color: black;
   margin-bottom: 20px;
+  font-family: 'Pretendard-Bold';
 }
 
 .planSubtitle {
@@ -248,9 +253,10 @@
 
 .footerNote {
   font-size: 12px;
-  color: black;
+  color: gray;
   margin-top: 20px;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 /* 모바일 반응형 뷰 설정 */

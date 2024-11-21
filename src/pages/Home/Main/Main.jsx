@@ -25,7 +25,7 @@ const Main = () => {
         />
         <h1 css={h1Style}>익숙함을 넘어 탁월함으로,</h1>
         <h1 css={h1Style}>
-        협업의 새로운 기준
+        협업의 새로운 기준        <br />
           <span css={spanStyle}>
             <span className="highlight">B</span>ranchify
           </span>{' '}

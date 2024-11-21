@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { motion } from 'framer-motion';
 import {
   containerStyle,
   title,
@@ -23,7 +24,13 @@ function BetaTestButton() {
   };
 
   return (
-    <div css={containerStyle}>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ y: { duration: 1 }, opacity: { duration: 0.5 } }}
+      css={containerStyle}
+    >
       <h2 css={title}>
         우리가 일하는 방식,
         <br />그 여정을 함께 할{' '}
@@ -38,7 +45,7 @@ function BetaTestButton() {
       >
         베타테스트 신청하러 가기
       </button>
-    </div>
+    </motion.div>
   );
 }
 
