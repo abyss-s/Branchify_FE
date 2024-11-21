@@ -1,27 +1,21 @@
-name: Update on Main Branch Changes
+name: Deploy to Vercel
 on:
   push:
     branches:
       - main
 
 jobs:
-  update:
-    name: Update Development Branch
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main
+      - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.BRANCHIFY_TOKEN }}
-          fetch-depth: 0
-          ref: main
 
-      - name: Create or Update Development Branch
-        run: |
-          git checkout -B dev
-          git merge main
+      - name: Install Vercel CLI
+        run: npm install -g vercel
 
-      - name: Push to Development Branch
-        run: |
-          git push origin dev -f
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.BRANCHIFY_TOKEN }}
+        run: vercel --prod --token $BRANCHIFY_TOKEN
