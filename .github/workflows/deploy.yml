@@ -13,13 +13,13 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v4
         with: 
-          token: ${ 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 }
+          token: ${ VITE_SECRET_KEY }
           fetch-depth: 0
           ref: main
 
       - name: Add remote-url
         run: |
-          git remote add forked-repo https://hyuke81:${ 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 }@github.com/hyuke81/Brachify_FE
+          git remote add forked-repo https://hyuke81:${ VITE_SECRET_KEY }@github.com/hyuke81/Brachify_FE
           git config user.name hyuke81
           git config user.email ${ rmsidthgusdl81@gmail.com }
       
