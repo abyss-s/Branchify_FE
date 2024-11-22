@@ -12,19 +12,18 @@ const containerStyle = css`
   align-items: center;
   gap: 20px;
   background-color: #f5f5f5;
-  padding: 6rem 0;
+  padding: 6rem 1rem;
 
   img {
     width: 60%;
   }
 
   @media (max-width: 768px) {
-    padding: 4rem 0;
     h1 {
       font-size: 24px;
     }
     p {
-      font-size: 16px;
+      font-size: 15px;
     }
     img {
       width: 70%;
@@ -48,7 +47,7 @@ const paragraphStyle = css`
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  letter-spacing: 0.41px;
+  letter-spacing: -0.41px;
   text-align: center;
 `;
 

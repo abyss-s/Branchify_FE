@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router-dom';
 const menuStyle = css`
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 0 auto;
   color: var(--gray-600, #6a6a6a);
   text-align: center;
   font-family: 'Pretendard-Bold';
@@ -15,13 +17,22 @@ const menuStyle = css`
   font-weight: 700;
   line-height: 22px;
   white-space: nowrap;
-  overflow: visible;
+  overflow: hidden;
 
   > li {
     padding: 5px 10px;
+    min-width: 50px;
     :hover {
       color: var(--gray-900, #1a1a1a);
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 10px;
+    > li {
+      padding: 5px 0;
+      font-size: 14px;
     }
   }
 `;

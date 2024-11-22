@@ -43,7 +43,7 @@ const titleStyle = css`
   text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 

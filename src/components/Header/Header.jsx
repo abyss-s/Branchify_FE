@@ -13,7 +13,7 @@ const headerStyle = css`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 10px;
   z-index: 1002;
   position: fixed;
   top: 0;
@@ -24,6 +24,7 @@ const headerStyle = css`
 
   @media (max-width: 768px) {
     padding: 0 1rem;
+    height: 56px;
   }
 `;
 
@@ -37,7 +38,6 @@ const Header = ({ onButtonClick }) => {
 
   const handleLogoClick = () => {
     dispatch(setShouldScrollToJoinForm(false)); // JoinForm으로 스크롤하지 않도록 설정
-    // 여기서 추가적으로 main 섹션으로 이동하도록 할 수 있습니다.
     const mainSection = document.querySelector('#main-section');
     if (mainSection) {
       mainSection.scrollIntoView({ behavior: 'smooth' });
@@ -49,7 +49,12 @@ const Header = ({ onButtonClick }) => {
       <div css={headerStyle}>
         {/* 로고 이미지 */}
         <div css={logoStyle} onClick={handleLogoClick}>
-          <img src={logoImage} alt="Logo" width="210px" />
+          <img
+            src={logoImage}
+            alt="Logo"
+            width='180px'
+            style={{ maxWidth: '100%', height: 'auto' }}
+          />
         </div>
         {/* 네비게이션 메뉴바 */}
         <MenuBar />
