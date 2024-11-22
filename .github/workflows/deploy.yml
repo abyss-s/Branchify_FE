@@ -19,8 +19,8 @@ jobs:
 
       - name: Add remote-url
         run: |
-          git remote add forked-repo https://[your-github-name]:${{ secrets.AUTO_ACTIONS }}@github.com/[your-github-name]/[your-repo-name]
-          git config user.name [your-github-name]
+          git remote add forked-repo https://[merging-Branchify]:${{ secrets.AUTO_ACTIONS }}@github.com/[merging-Branchify]/[Branchify_FE]
+          git config user.name [merging-Branchify]
           git config user.email ${{ secrets.EMAIL }}
       
       - name: Push changes to forked-repo 
@@ -30,4 +30,3 @@ jobs:
       - name: Clean up
         run: |
           git remote remove forked-repo
-출처: https://datdaradanadat.tistory.com/177 [닿망징창 여정:티스토리]
