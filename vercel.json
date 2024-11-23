@@ -4,5 +4,15 @@
       "source": "/branchify/:path*",
       "destination": "http://101.101.217.98:8080/:path*"
     }
-  ]
+  ],
+  "version": 2,
+    "routes": [
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/.*",
+        "dest": "/index.html"
+      }
+    ]
 }
