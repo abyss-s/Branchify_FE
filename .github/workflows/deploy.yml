@@ -8,10 +8,12 @@ jobs:
   sync:
     name: Sync forked repo
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
         with: 
+          repository: merging-Branchify/Brachify_FE
           token: ${{ secrets.BRANCHIFY_TOKEN }}
           fetch-depth: 0
           ref: main
@@ -19,8 +21,8 @@ jobs:
       - name: Add remote-url
         run: |
           git remote add forked-repo https://hyuke81:${{ secrets.BRANCHIFY_TOKEN }}@github.com/hyuke81/Brachify_FE
-          git config user.name hyuke81
-          git config user.email ${ ${{ secrets.EMAIL }} }
+          git config user.name "hyuke81"
+          git config user.email "${{ secrets.EMAIL }}"
       
       - name: Push changes to forked-repo 
         run: |
