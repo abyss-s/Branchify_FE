@@ -37,7 +37,7 @@ function BetaTestButton() {
         <span css={boldText}>베타 테스터를 모집합니다.</span>
       </h2>
       <p css={testtext}>베타 테스트 기간</p>
-      <p css={timetext}>2024.11.25 - 2024.12.9</p>
+      <p css={timetext}>2024.11.27 - 2024.12.11</p>
       <button
         css={[buttonStyle, isVisible && floatingAnimation]}
         ref={buttonRef}
