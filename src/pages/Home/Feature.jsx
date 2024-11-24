@@ -20,13 +20,13 @@ const containerStyle = css`
 
   @media (max-width: 768px) {
     h1 {
-      font-size: 24px;
+      font-size: 22px;
     }
     p {
-      font-size: 15px;
+      font-size: 14px;
     }
     img {
-      width: 70%;
+      width: 90%;
     }
   }
 `;

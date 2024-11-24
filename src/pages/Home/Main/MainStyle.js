@@ -37,7 +37,7 @@ export const mainStyle = css`
       font-size: 34px;
     }
     p {
-      font-size: 24px;
+      font-size: 13px;
     }
   }
 `;
@@ -91,6 +91,7 @@ export const rnbStyle = css`
 
   @media (max-width: 768px) {
     margin-top: 50px;
+    margin-left: 80px;
   }
 `;
 

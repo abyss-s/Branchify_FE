@@ -21,7 +21,7 @@ const containerStyle = css`
   @media (max-width: 768px) {
     padding: 4rem 1rem;
     p {
-      font-size: 24px;
+      font-size: 15px;
     }
     img {
       width: 90%;

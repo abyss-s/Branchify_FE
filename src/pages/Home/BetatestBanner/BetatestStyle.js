@@ -28,16 +28,16 @@ export const containerStyle = css`
 
 export const title = css`
     color: white;
-  font-family: 'Pretendard-Bold';
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 2.4rem;
-  letter-spacing: -1.6px;
-  text-align: center;
+    font-family: 'Pretendard-Bold';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.4rem;
+    letter-spacing: 0px;
+    text-align: center;
 
     @media (max-width: 768px) {
-        font-size: 22px;
+        font-size: 20px;
     }
 
 `;
@@ -75,8 +75,8 @@ export const buttonStyle = css`
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: 'Pretendard-Bold';
+    transition: background-color 0.3s; 
+    font-family: 'Pretendard';
 
     &:hover {
         background-color: #dd4526;

@@ -33,6 +33,10 @@ export const titleStyle = css`
   margin-bottom: 20px;
   text-align: center;
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+        font-size: 1.1rem;
+    }
 `;
 
 export const spanStyle = css`
@@ -46,6 +50,10 @@ export const spanStyle = css`
   .highlight {
     color: var(--key, #f1502f);
   }
+
+  @media (max-width: 768px) {
+        font-size: 1.1rem;
+    }
 `;
 
 export const boldtitle = css`
@@ -69,6 +77,10 @@ export const formTitleStyle = css`
   font-weight: bold;
   padding-bottom: 20px;
   text-align: center;
+
+  @media (max-width: 768px) {
+        font-size: 18px;
+    }
 `;
 
 export const formRowStyle = css`
@@ -85,6 +97,10 @@ export const labelStyle = css`
   padding-left: 30px;
   width: 80px;
   text-align: left;
+
+  @media (max-width: 768px) {
+        font-size: 14px;
+  }
 `;
 
 export const inputStyle = css`
@@ -102,6 +118,10 @@ export const inputStyle = css`
 
   &:focus {
     border-bottom-color: #f1502f;
+  }
+
+  @media (max-width: 768px) {
+        font-size: 14px;
   }
 `;
 
@@ -126,10 +146,13 @@ export const buttonStyle = css`
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-family: 'Pretendard-Bold';
+  font-family: 'Pretendard';
 
   &:hover {
     background-color: #dd4526;
+  }
+  @media (max-width: 768px) {
+        font-size: 14px;
   }
 `;
 

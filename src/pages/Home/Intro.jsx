@@ -20,13 +20,13 @@ const containerStyle = css`
   @media (max-width: 768px) {
     padding: 4rem 1rem;
     h1 {
-      font-size: 30px;
-    }
-    p {
       font-size: 20px;
     }
+    p {
+      font-size: 15px;
+    }
     img {
-      width: 100%;
+      width: 90%;
     }
   }
 `;
@@ -68,12 +68,18 @@ const sectionStyle = css`
 const textStyle = css`
   color: black;
   font-family: 'Pretendard-Medium';
-  font-size: 18px;
+  font-size: 18px; 
   font-weight: 400;
   line-height: 24px;
   letter-spacing: -1.4px;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 13px !important;
+    margin-top: 20px;
+  }
 `;
+
 
 const Feature = () => {
   return (

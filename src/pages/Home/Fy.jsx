@@ -16,13 +16,13 @@ const containerStyle = css`
     flex-direction: column;
     padding: 2rem 1rem;
     h1 {
-      font-size: 24px;
+      font-size: 22px;
     }
     p {
-      font-size: 16px;
+      font-size: 14px;
     }
     img {
-      width: 50%;
+      width: 40%;
     }
   }
 `;
