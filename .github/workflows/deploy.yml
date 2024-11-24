@@ -13,7 +13,7 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v4
         with: 
-          repository: merging-Branchify/Brachify_FE
+          repository: merging-Branchify/Branchify_FE
           token: ${{ secrets.BRANCHIFY_TOKEN }}
           fetch-depth: 0
           ref: main
