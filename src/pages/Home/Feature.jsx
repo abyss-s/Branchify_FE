@@ -26,7 +26,7 @@ const containerStyle = css`
       font-size: 14px;
     }
     img {
-      width: 90%;
+      width: 105%;
     }
   }
 `;

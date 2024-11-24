@@ -19,7 +19,7 @@ const containerStyle = css`
       font-size: 22px;
     }
     p {
-      font-size: 14px;
+      font-size: 13px;
     }
     img {
       width: 40%;

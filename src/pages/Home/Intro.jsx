@@ -26,7 +26,7 @@ const containerStyle = css`
       font-size: 15px;
     }
     img {
-      width: 90%;
+      width: 105%;
     }
   }
 `;
@@ -73,9 +73,10 @@ const textStyle = css`
   line-height: 24px;
   letter-spacing: -1.4px;
   margin-bottom: 40px;
+  text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 13px !important;
+    font-size: 15px !important;
     margin-top: 20px;
   }
 `;

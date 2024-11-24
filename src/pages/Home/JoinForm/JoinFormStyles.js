@@ -35,7 +35,7 @@ export const titleStyle = css`
   line-height: 1.5;
 
   @media (max-width: 768px) {
-        font-size: 1.1rem;
+        font-size: 1.0rem;
     }
 `;
 
@@ -52,7 +52,7 @@ export const spanStyle = css`
   }
 
   @media (max-width: 768px) {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
 `;
 

@@ -29,7 +29,7 @@
   font-weight: bold;
   margin-bottom: 10px;
   font-family: 'Pretendard-Bold';
-  fon-weight: 700;
+  font-weight: 700;
   line-height: 1.6rem;
 }
 
@@ -47,7 +47,6 @@
   margin-left: 170px;
 }
 
-/* 토글 */
 .toggleContainer {
   display: flex;
   align-items: center;
@@ -117,6 +116,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 
 .largePlanBox {
   display: flex;
@@ -272,8 +272,7 @@
   }
 
   .fy-img {
-    width: 150px;
-    height: 130px;
+    display: none; /* 미디어 쿼리에서 이미지 숨기기 */
   }
 
   .largePlanBox {
@@ -307,13 +306,43 @@
   }
 
   .planBox {
-    width: 100%;
-    max-width: 280px;
+    width: 90%; 
+    max-width: 250px;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .planBox:hover {
+    border-color: #f1502f;
+  }
+
+  .planTitle {
+    font-size: 16px; 
+    margin-bottom: 10px;
+  }
+
+  .smallplanTitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .planPrice {
+    font-size: 20px; 
+    margin-bottom: 15px;
+  }
+
+  .planSubtitle {
+    font-size: 14px; 
+    margin-top: 10px;
   }
 
   .planFeatures {
-    text-align: center;
-    padding: 10px 0;
+    font-size: 13px;
+    padding: 5px 0;
+  }
+
+  .footerNote {
+    font-size: 10px;
   }
 
   .planContainer {
