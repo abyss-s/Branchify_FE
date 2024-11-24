@@ -20,7 +20,7 @@ jobs:
 
       - name: Add remote-url
         run: |
-          git remote add forked-repo https://hyuke81:${{ secrets.BRANCHIFY_TOKEN }}@github.com/hyuke81/Brachify_FE
+          git remote add forked-repo https://hyuke81:${{ secrets.BRANCHIFY_TOKEN }}@github.com/hyuke81/Branchify_FE
           git config user.name "hyuke81"
           git config user.email "${{ secrets.EMAIL }}"
       
