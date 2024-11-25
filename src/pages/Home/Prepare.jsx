@@ -90,7 +90,7 @@ const Prepare = () => {
         >
           <Box
             images={[<img key="ticket" src={ticketIcon} alt="TicketIcon" />]}
-            title="이미지로 티켓 생성"
+            title="이모지로 티켓 생성"
             content="슬랙 메세지에 이모지로 반응하면 Jira에서 바로 티켓 생성"
           />
         </motion.div>
