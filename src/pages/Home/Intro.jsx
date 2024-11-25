@@ -20,7 +20,7 @@ const containerStyle = css`
   @media (max-width: 768px) {
     padding: 4rem 1rem;
     h1 {
-      font-size: 20px;
+      font-size: 18px;
     }
     p {
       font-size: 15px;
@@ -38,7 +38,7 @@ const titleStyle = css`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  letter-spacing: -2.4px;
+  letter-spacing: -2.1px;
 `;
 
 const paragraphStyle = css`

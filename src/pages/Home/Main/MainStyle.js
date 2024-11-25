@@ -14,7 +14,7 @@ export const mainStyle = css`
   }
 
   @media (max-width: 1000px) {
-    padding: 2rem 6rem;
+    padding: 2rem 4rem;
     flex-direction: column;
     h1 {
       font-size: 36px;
@@ -28,10 +28,10 @@ export const mainStyle = css`
   }
 
   @media (max-width: 768px) {
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
     flex-direction: column;
     h1 {
-      font-size: 32px;
+      font-size: 30px;
     }
     span {
       font-size: 34px;
