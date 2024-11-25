@@ -1,10 +1,8 @@
 import axios from 'axios';
 
-const SERVER = import.meta.env.VITE_SERVER_API;
-
 export const submitEmail = async (email) => {
     try {
-        const response = await axios.post(`${SERVER}/api/branchify/beta-tester`, {
+        const response = await axios.post('https://www.branchify.site/api/branchify/beta-tester', {
         email: email,
         });
         return response.data;
