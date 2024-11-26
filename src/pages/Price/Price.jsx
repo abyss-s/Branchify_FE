@@ -41,7 +41,7 @@ function Price() {
                             onClick={() => handlePlanClick('light')}
                         >
                             <div className="planLeft">
-                                <h3 className="planTitle">라이트 플랜</h3>
+                                <h3 className="planTitle">테스터 플랜</h3>
                                 <span className="planPrice">무료</span>
                                 <p className="planSubtitle">(베타테스트 기간 한정)</p>
                             </div>
@@ -59,7 +59,7 @@ function Price() {
                                 className={`planBox ${selectedPlan === 'induck' ? 'planBoxSelected' : ''}`}
                                 onClick={() => handlePlanClick('indy')}
                             >
-                                <h3 className="smallplanTitle">인덕이 플랜</h3>
+                                <h3 className="smallplanTitle">라이트 플랜</h3>
                                 <span className="planPrice">19,000원/월</span>
                                 <p className="planMax">최대 사용 인원: 10명 이하</p>
                             </div>
@@ -67,7 +67,7 @@ function Price() {
                                 className={`planBox ${selectedPlan === 'ahnyong' ? 'planBoxSelected' : ''}`}
                                 onClick={() => handlePlanClick('ahn')}
                             >
-                                <h3 className="smallplanTitle">안뇽이 플랜</h3>
+                                <h3 className="smallplanTitle">베이직 플랜</h3>
                                 <span className="planPrice">39,000원/월</span>
                                 <p className="planMax">최대 사용 인원: 50명 미만</p>
                             </div>
@@ -75,7 +75,7 @@ function Price() {
                                 className={`planBox ${selectedPlan === 'business' ? 'planBoxSelected' : ''}`}
                                 onClick={() => handlePlanClick('business')}
                             >
-                                <h3 className="smallplanTitle">비즈니스 플랜</h3>
+                                <h3 className="smallplanTitle">프리미엄 플랜</h3>
                                 <span className="planPrice">가격 문의</span>
                                 <p className="planMax">최대 사용 인원: 50명 이상</p>
                             </div>
@@ -88,7 +88,7 @@ function Price() {
                             className={`planBox ${selectedPlan === 'induck' ? 'planBoxSelected' : ''}`}
                             onClick={() => handlePlanClick('indy')}
                         >
-                            <h3 className="smallplanTitle">인덕이 플랜</h3>
+                            <h3 className="smallplanTitle">라이트 플랜</h3>
                             <span className="planPrice">14,250원/월</span>
                             <p className="planDiscount">(25% 할인)</p>
                             <p className="planMax">최대 사용 인원: 10명 이하</p>
@@ -97,7 +97,7 @@ function Price() {
                             className={`planBox ${selectedPlan === 'ahnyong' ? 'planBoxSelected' : ''}`}
                             onClick={() => handlePlanClick('ahn')}
                         >
-                            <h3 className="smallplanTitle">안뇽이 플랜</h3>
+                            <h3 className="smallplanTitle">베이직 플랜</h3>
                             <span className="planPrice">29,250원/월</span>
                             <p className="planDiscount">(25% 할인)</p>
                             <p className="planMax">최대 사용 인원: 50명 미만</p>
@@ -106,7 +106,7 @@ function Price() {
                             className={`planBox ${selectedPlan === 'business' ? 'planBoxSelected' : ''}`}
                             onClick={() => handlePlanClick('business')}
                         >
-                            <h3 className="smallplanTitle">비즈니스 플랜</h3>
+                            <h3 className="smallplanTitle">프리미엄 플랜</h3>
                             <span className="planPrice">가격 문의</span>
                             <p className="planMax">최대 사용 인원: 50명 이상</p>
                         </div>
