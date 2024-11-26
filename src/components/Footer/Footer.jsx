@@ -5,7 +5,7 @@ import githubIcon from '../../assets/icons/github.png';
 
 const footerStyle = css`
   display: flex;
-  height: 200px;
+  height: 150px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -18,15 +18,14 @@ const footerStyle = css`
 const mailStyle = css`
   color: gray;
   font-family: 'Pretendard';
-  font-size: 14px;
+  font-size: 13px;
   font-style: normal;
-  margin-bottom: 10px;
 `;
 
 const textStyle = css`
   color: #6a6a6a;
   font-family: 'Pretendard-Medium';
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
@@ -36,7 +35,7 @@ const Footer = () => {
   return (
     <div css={footerStyle}>
       {/* 로고 이미지 */}
-      <img src={logoImage} alt="Logo" width="200px" />
+      <img src={logoImage} alt="Logo" width="130px" />
       {/* 이메일 주소 */}
       <h3 css={mailStyle}>merginginging@gmail.com</h3>
       {/* 저작권 */}
