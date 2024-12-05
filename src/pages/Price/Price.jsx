@@ -35,7 +35,7 @@ function Price() {
             <div className="planContainer">
                 {/* 월 결제 */}
                 {!isYearly ? (
-                    <div>
+                    <div className='planset'>
                         <div
                             className={`largePlanBox ${selectedPlan === 'light' ? 'planBoxSelected' : ''}`}
                             onClick={() => handlePlanClick('light')}
