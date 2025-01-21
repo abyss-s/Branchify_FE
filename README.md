@@ -38,3 +38,55 @@
 npm i
 npm run dev
 ```
+
+## 프로젝트 구조
+
+```plaintext
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📂fonts
+ ┃ ┣ 📂icons
+ ┃ ┗ 📂images
+ ┣ 📂components
+ ┃ ┣ 📂Box
+ ┃ ┃ ┗ 📜Box.jsx
+ ┃ ┣ 📂Footer
+ ┃ ┃ ┗ 📜Footer.jsx
+ ┃ ┣ 📂Header
+ ┃ ┃ ┣ 📜Header.jsx
+ ┃ ┃ ┣ 📜HeaderButton.jsx
+ ┃ ┃ ┗ 📜MenuBar.jsx
+ ┃ ┗ 📜Layout.jsx
+ ┣ 📂pages
+ ┃ ┣ 📂Home
+ ┃ ┃ ┣ 📂BetatestBanner
+ ┃ ┃ ┃ ┣ 📜BetatestBanner.jsx
+ ┃ ┃ ┃ ┣ 📜BetatestStyle.js
+ ┃ ┃ ┃ ┗ 📜useVisibilityObserver.js
+ ┃ ┃ ┣ 📂JoinForm
+ ┃ ┃ ┃ ┣ 📜Api.js
+ ┃ ┃ ┃ ┣ 📜JoinForm.jsx
+ ┃ ┃ ┃ ┣ 📜JoinFormStyles.js
+ ┃ ┃ ┃ ┣ 📜Modal.jsx
+ ┃ ┃ ┃ ┣ 📜useObserver.js
+ ┃ ┃ ┃ ┗ 📜Validation.js
+ ┃ ┃ ┣ 📂Main
+ ┃ ┃ ┃ ┣ 📜Main.jsx
+ ┃ ┃ ┃ ┣ 📜MainStyle.js
+ ┃ ┃ ┃ ┗ 📜useVisibleAnimation.js
+ ┃ ┃ ┣ 📜Feature.jsx
+ ┃ ┃ ┣ 📜Feature2.jsx
+ ┃ ┃ ┣ 📜Fy.jsx
+ ┃ ┃ ┣ 📜Home.jsx
+ ┃ ┃ ┣ 📜Intro.jsx
+ ┃ ┃ ┗ 📜Prepare.jsx
+ ┃ ┗ 📂Price
+ ┃ ┃ ┣ 📜Price.css
+ ┃ ┃ ┗ 📜Price.jsx
+ ┣ 📂stores
+ ┃ ┗ 📜store.js
+ ┣ 📜App.jsx
+ ┣ 📜index.css
+ ┣ 📜main.jsx
+ ┗ 📜routes.jsx
+```
